@@ -1,0 +1,21 @@
+#!/bin/bash
+echo "hello from Hiring Team!"1
+#echo "hello from pathnex!"2
+name="Pankaj Bhatra"
+echo "Hello HR Team, I have Good knowledge off Shell scripting so please can you consider about me $name"
+path="/var/log/systemlog"
+echo "logs are in: $path"
+echo "logs is very important for troubleshooting: $path"
+echo "mkdir -p linux-scripting && cd linux-scripting && touch pathnex.sh && chmod +x pathnex.sh" > out.txt
+echo "ls" >> out.txt
+ls /not-found 2> error.log
+cat /var/log/syslog | grep -i error | head -n 10 >>out.log
+cat /var/log/syslog | grep -i error | head -n 10 2>>error.log
+file="out.txt"
+if [ -f "$file" ]; then
+echo "file exists"
+exit 0
+else
+echo "file not found"
+exit 1
+fi
